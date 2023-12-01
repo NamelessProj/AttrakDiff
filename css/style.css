@@ -1,0 +1,195 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    width: min(100%, 1200px);
+    margin-inline: auto;
+    font-family: Arial, sans-serif;
+    background: #fff;
+}
+
+header{
+    background: linear-gradient(90deg, #fff, rgb(0 0 0 / 0), rgb(0 0 0 / 0), #fff),
+    url("../img/flower.JPG") center / cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-block: 4rem;
+    gap: 1rem;
+    color: aliceblue;
+    margin-bottom: 2rem;
+}
+
+main:has(input[type="checkbox"]){
+    width: calc(100% - 20px);
+    margin-inline: auto;
+    display: flex;
+    padding: 1rem;
+    background: #eee;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+    justify-content: space-evenly;
+}
+div:has(input[type="checkbox"]){
+    display: flex;
+    gap: 2rem;
+}
+div:has(input[type="checkbox"]) label{cursor: pointer;}
+label:has(input[type="checkbox"]){
+    --_height: 20px;
+    height: var(--_height);
+    aspect-ratio: 2 / 1;
+    background: #9b9b9b;
+    border-radius: 100vh;
+    position: relative;
+}
+label:has(input[type="checkbox"])::before{
+    content: '';
+    position: absolute;
+    background: #505050;
+    height: var(--_height);
+    aspect-ratio: 1;
+    border-radius: 100vh;
+    transition: transform .3s ease;
+}
+label > input[type="checkbox"]{
+    appearance: none;
+}
+label:has(input[type="checkbox"]:checked){
+    background: #BB86FC;
+}
+label:has(input[type="checkbox"]:checked)::before{
+    background: #6200EE;
+    transform: translateX(100%);
+}
+
+form{
+    width: calc(100% - 20px);
+    margin-inline: auto;
+}
+
+section{
+    --text-span-size: 150px;
+    --btn-span-size: 232px;
+    --column-gap: 20px;
+
+    padding: 1rem;
+    background: #eee;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+    min-width: calc(var(--btn-span-size) + 2 * var(--text-span-size) + 4 * var(--column-gap));
+    margin-inline: auto;
+}
+section > div{
+    display: grid;
+    grid-template-areas: "te-1 in te-2";
+    grid-template-columns: var(--text-span-size) 1fr var(--text-span-size);
+    column-gap: var(--column-gap);
+    grid-auto-rows: minmax(60px, auto);
+}
+section > div > span{
+    display: flex;
+    justify-content: right;
+    text-align: right;
+    align-items: center;
+    position: relative;
+}
+
+body.showInverse section > div > span[data-inverse="inverse"]::before,
+body.showInverse section > div > span[data-inverse="inverse"]::after{
+    --_position: -175px;
+    content: '';
+    position: absolute;
+    height: 15px;
+    aspect-ratio: 1;
+    border-radius: 2px;
+    background: #BB86FC;
+    transform: rotate(45deg);
+}
+body.showInverse section > div > span[data-inverse="inverse"]::before{left: var(--_position);}
+body.showInverse section > div > span[data-inverse="inverse"]::after{right: var(--_position);}
+
+section > div > span:nth-child(3n){
+    justify-content: left;
+    text-align: left;
+}
+section > div > span:has(label){
+    justify-content: space-around;
+}
+section > div > span > label{
+    width: 35px;
+    aspect-ratio: 1;
+    border-radius: 100vh;
+    border: 1px solid #006b00;
+    transition: background .3s ease-out;
+}
+section > div > span > label > input{appearance: none;}
+section > div > span > label:has(input:checked){
+    background: #006b00;
+    transition: background .1s ease-in;
+}
+section > div > span > label:is(:nth-child(2), :nth-child(6)){width: 30px;}
+section > div > span > label:is(:nth-child(3), :nth-child(5)){width: 25px;}
+section > div > span > label:nth-child(4){width: 20px; height: 20px}
+
+section:has(button){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    margin-bottom: 3rem;
+}
+button{
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background: rgb(0 107 0 / .25);
+    padding: 2rem 5rem;
+    font-weight: 700;
+    color: #111;
+    transition: .2s ease-in-out;
+}
+button:not(:disabled):hover{
+    background: rgb(0 107 0);
+    color: #eee;
+}
+button:disabled{
+    background: rgba(109, 109, 109, 0.5);
+    cursor: not-allowed;
+}
+
+section.charts{
+    opacity: 0;
+    transition: opacity .2s ease, margin-bottom .2s ease;
+}
+section.charts:has(canvas){
+    width: 580px;
+    opacity: 1;
+    margin-bottom: 5rem;
+}
+section.charts > div{
+    display: inline-block;
+    position: relative;
+    width: 580px;
+    height: 0px;
+    transition: height .2s ease;
+}
+section.charts > div:has(canvas){
+    height: 290px;
+}
+section.charts > div > canvas{
+    position: absolute;
+    inset: 0;
+}
+section.charts > div > canvas:not(:last-child){
+    visibility: hidden;
+    display: none;
+}

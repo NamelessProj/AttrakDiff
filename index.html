@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" value="Un test AttrakDiff disponible en ligne.">
+    <title>Test AttrakDiff</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
+    <script src="js/script.js" defer></script>
+
+</head>
+<body>
+    <header>
+        <h2>Bienvenue sur le</h2>
+        <h1>Test AttrakDiff</h1>
+    </header>
+
+    <main class="settings">
+        <div>
+            <label for="showInverseBtn">Montrer les indicateurs d'inversements</label>
+            <label>
+                <input type="checkbox" name="showInverseBtn" id="showInverseBtn">
+            </label>
+        </div>
+    </main>
+
+    <form name="attrakDiff">
+        <section>
+            <div>
+                <span>Humain</span>
+                <span data-attrakdiff="QP" data-inverse="inverse">
+                    <label>
+                        <input type="radio" name="attrakDiff_HuTe" value="-3">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_HuTe" value="-2">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_HuTe" value="-1">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_HuTe" value="0">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_HuTe" value="1">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_HuTe" value="2">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_HuTe" value="3">
+                    </label>
+                </span>
+                <span>Technique</span>
+            </div>
+
+            <div>
+                <span>M'isole</span>
+                <span data-attrakdiff="QHI">
+                    <label>
+                        <input type="radio" name="attrakDiff_MiMs" value="-3">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_MiMs" value="-2">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_MiMs" value="-1">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_MiMs" value="0">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_MiMs" value="1">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_MiMs" value="2">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_MiMs" value="3">
+                    </label>
+                </span>
+                <span>Me sociabilise</span>
+            </div>
+
+            <div>
+                <span>Plaisant</span>
+                <span data-attrakdiff="ATT" data-inverse="inverse">
+                    <label>
+                        <input type="radio" name="attrakDiff_PlDp" value="-3">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_PlDp" value="-2">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_PlDp" value="-1">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_PlDp" value="0">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_PlDp" value="1">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_PlDp" value="2">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_PlDps" value="3">
+                    </label>
+                </span>
+                <span>Déplaisant</span>
+            </div>
+
+            <div>
+                <span>Original</span>
+                <span data-attrakdiff="QHS" data-inverse="inverse">
+                    <label>
+                        <input type="radio" name="attrakDiff_OrCo" value="-3">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_OrCo" value="-2">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_OrCo" value="-1">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_OrCo" value="0">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_OrCo" value="1">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_OrCo" value="2">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_OrCo" value="3">
+                    </label>
+                </span>
+                <span>Conventionnel</span>
+            </div>
+
+            <div>
+                <span>Simple</span>
+                <span data-attrakdiff="QP" data-inverse="inverse">
+                    <label>
+                        <input type="radio" name="attrakDiff_SiCo" value="-3">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_SiCo" value="-2">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_SiCo" value="-1">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_SiCo" value="0">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_SiCo" value="1">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_SiCo" value="2">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_SiCo" value="3">
+                    </label>
+                </span>
+                <span>Compliqué</span>
+            </div>
+
+            <div>
+                <span>Profesionnel</span>
+                <span data-attrakdiff="QHI" data-inverse="inverse">
+                    <label>
+                        <input type="radio" name="attrakDiff_PrAm" value="-3">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_PrAm" value="-2">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_PrAm" value="-1">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_PrAm" value="0">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_PrAm" value="1">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_PrAm" value="2">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_PrAm" value="3">
+                    </label>
+                </span>
+                <span>Amateur</span>
+            </div>
+
+            <div>
+                <span>Laid</span>
+                <span data-attrakdiff="ATT">
+                    <label>
+                        <input type="radio" name="attrakDiff_LaBe" value="-3">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_LaBe" value="-2">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_LaBe" value="-1">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_LaBe" value="0">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_LaBe" value="1">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_LaBe" value="2">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_LaBe" value="3">
+                    </label>
+                </span>
+                <span>Beau</span>
+            </div>
+
+            <div>
+                <span>Pratique</span>
+                <span data-attrakdiff="QP" data-inverse="inverse">
+                    <label>
+                        <input type="radio" name="attrakDiff_PrPp" value="-3">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_PrPp" value="-2">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_PrPp" value="-1">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_PrPp" value="0">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_PrPp" value="1">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_PrPp" value="2">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_PrPp" value="3">
+                    </label>
+                </span>
+                <span>Pas pratique</span>
+            </div>
+
+            <div>
+                <span>Agréable</span>
+                <span data-attrakdiff="ATT" data-inverse="inverse">
+                    <label>
+                        <input type="radio" name="attrakDiff_AgDa" value="-3">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_AgDa" value="-2">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_AgDa" value="-1">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_AgDa" value="0">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_AgDa" value="1">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_AgDa" value="2">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_AgDa" value="3">
+                    </label>
+                </span>
+                <span>Désagréable</span>
+            </div>
+
+            <div>
+                <span>Fastidieux</span>
+                <span data-attrakdiff="QP">
+                    <label>
+                        <input type="radio" name="attrakDiff_FaEf" value="-3">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_FaEf" value="-2">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_FaEf" value="-1">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_FaEf" value="0">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_FaEf" value="1">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_FaEf" value="2">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_FaEf" value="3">
+                    </label>
+                </span>
+                <span>Efficace</span>
+            </div>
+        </section>
+
+        <section>
+            <div>
+                <span>De bon goût</span>
+                <span data-attrakdiff="QHI" data-inverse="inverse">
+                    <label>
+                        <input type="radio" name="attrakDiff_DgDmg" value="-3">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_DgDmg" value="-2">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_DgDmg" value="-1">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_DgDmg" value="0">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_DgDmg" value="1">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_DgDmg" value="2">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_DgDmg" value="3">
+                    </label>
+                </span>
+                <span>De mauvais goût</span>
+            </div>
+
+            <div>
+                <span>Prévisible</span>
+                <span data-attrakdiff="QP" data-inverse="inverse">
+                    <label>
+                        <input type="radio" name="attrakDiff_PrIm" value="-3">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_PrIm" value="-2">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_PrIm" value="-1">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_PrIm" value="0">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_PrIm" value="1">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_PrIm" value="2">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_PrIm" value="3">
+                    </label>
+                </span>
+                <span>Imprévisible</span>
+            </div>
+
+            <div>
+                <span>Bas de gamme</span>
+                <span data-attrakdiff="QHI">
+                    <label>
+                        <input type="radio" name="attrakDiff_BgHg" value="-3">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_BgHg" value="-2">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_BgHg" value="-1">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_BgHg" value="0">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_BgHg" value="1">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_BgHg" value="2">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_BgHg" value="3">
+                    </label>
+                </span>
+                <span>Haut de gamme</span>
+            </div>
+
+            <div>
+                <span>M'exclut</span>
+                <span data-attrakdiff="QHI">
+                    <label>
+                        <input type="radio" name="attrakDiff_MeMi" value="-3">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_MeMi" value="-2">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_MeMi" value="-1">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_MeMi" value="0">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_MeMi" value="1">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_MeMi" value="2">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_MeMi" value="3">
+                    </label>
+                </span>
+                <span>M'intègre</span>
+            </div>
+
+            <div>
+                <span>Me rapproche des autres</span>
+                <span data-attrakdiff="QHI" data-inverse="inverse">
+                    <label>
+                        <input type="radio" name="attrakDiff_MraMsa" value="-3">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_MraMsa" value="-2">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_MraMsa" value="-1">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_MraMsa" value="0">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_MraMsa" value="1">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_MraMsa" value="2">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_MraMsa" value="3">
+                    </label>
+                </span>
+                <span>Me sépare des autres</span>
+            </div>
+
+            <div>
+                <span>Non présentable</span>
+                <span data-attrakdiff="QHI">
+                    <label>
+                        <input type="radio" name="attrakDiff_MpPr" value="-3">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_MpPr" value="-2">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_MpPr" value="-1">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_MpPr" value="0">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_MpPr" value="1">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_MpPr" value="2">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_MpPr" value="3">
+                    </label>
+                </span>
+                <span>Présentable</span>
+            </div>
+
+            <div>
+                <span>Rebutant</span>
+                <span data-attrakdiff="ATT">
+                    <label>
+                        <input type="radio" name="attrakDiff_ReAt" value="-3">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_ReAt" value="-2">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_ReAt" value="-1">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_ReAt" value="0">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_ReAt" value="1">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_ReAt" value="2">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_ReAt" value="3">
+                    </label>
+                </span>
+                <span>Attirant</span>
+            </div>
+
+            <div>
+                <span>Sans imagination</span>
+                <span data-attrakdiff="QHS">
+                    <label>
+                        <input type="radio" name="attrakDiff_SiCr" value="-3">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_SiCr" value="-2">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_SiCr" value="-1">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_SiCr" value="0">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_SiCr" value="1">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_SiCr" value="2">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_SiCr" value="3">
+                    </label>
+                </span>
+                <span>Créatif</span>
+            </div>
+
+            <div>
+                <span>Bon</span>
+                <span data-attrakdiff="ATT" data-inverse="inverse">
+                    <label>
+                        <input type="radio" name="attrakDiff_BoMa" value="-3">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_BoMa" value="-2">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_BoMa" value="-1">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_BoMa" value="0">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_BoMa" value="1">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_BoMa" value="2">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_BoMa" value="3">
+                    </label>
+                </span>
+                <span>Mauvais</span>
+            </div>
+        </section>
+
+        <section>
+            <div>
+                <span>Confus</span>
+                <span data-attrakdiff="QP">
+                    <label>
+                        <input type="radio" name="attrakDiff_CoCl" value="-3">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_CoCl" value="-2">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_CoCl" value="-1">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_CoCl" value="0">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_CoCl" value="1">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_CoCl" value="2">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_CoCl" value="3">
+                    </label>
+                </span>
+                <span>Clair</span>
+            </div>
+
+            <div>
+                <span>Repoussant</span>
+                <span data-attrakdiff="ATT">
+                    <label>
+                        <input type="radio" name="attrakDiff_ReAtt" value="-3">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_ReAtt" value="-2">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_ReAtt" value="-1">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_ReAtt" value="0">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_ReAtt" value="1">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_ReAtt" value="2">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_ReAtt" value="3">
+                    </label>
+                </span>
+                <span>Attrayant</span>
+            </div>
+
+            <div>
+                <span>Audacieux</span>
+                <span data-attrakdiff="QHS" data-inverse="inverse">
+                    <label>
+                        <input type="radio" name="attrakDiff_AuPr" value="-3">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_AuPr" value="-2">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_AuPr" value="-1">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_AuPr" value="0">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_AuPr" value="1">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_AuPr" value="2">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_AuPr" value="3">
+                    </label>
+                </span>
+                <span>Prudent</span>
+            </div>
+
+            <div>
+                <span>Novateur</span>
+                <span data-attrakdiff="QHS" data-inverse="inverse">
+                    <label>
+                        <input type="radio" name="attrakDiff_NoCo" value="-3">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_NoCo" value="-2">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_NoCo" value="-1">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_NoCo" value="0">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_NoCo" value="1">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_NoCo" value="2">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_NoCo" value="3">
+                    </label>
+                </span>
+                <span>Conservateur</span>
+            </div>
+
+            <div>
+                <span>Ennuyeux</span>
+                <span data-attrakdiff="QHS">
+                    <label>
+                        <input type="radio" name="attrakDiff_EnCa" value="-3">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_EnCa" value="-2">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_EnCa" value="-1">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_BEnCa" value="0">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_EnCa" value="1">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_EnCa" value="2">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_EnCa" value="3">
+                    </label>
+                </span>
+                <span>Captivant</span>
+            </div>
+
+            <div>
+                <span>Peu exigeant</span>
+                <span data-attrakdiff="QHS">
+                    <label>
+                        <input type="radio" name="attrakDiff_PeCh" value="-3">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_PeCh" value="-2">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_PeCh" value="-1">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_PeCh" value="0">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_PeCh" value="1">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_PeCh" value="2">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_PeCh" value="3">
+                    </label>
+                </span>
+                <span>Challenging</span>
+            </div>
+
+            <div>
+                <span>Motivant</span>
+                <span data-attrakdiff="ATT" data-inverse="inverse">
+                    <label>
+                        <input type="radio" name="attrakDiff_MoDe" value="-3">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_MoDe" value="-2">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_MoDe" value="-1">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_MoDe" value="0">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_MoDe" value="1">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_MoDe" value="2">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_MoDe" value="3">
+                    </label>
+                </span>
+                <span>Décourageant</span>
+            </div>
+
+            <div>
+                <span>Nouveau</span>
+                <span data-attrakdiff="QHS" data-inverse="inverse">
+                    <label>
+                        <input type="radio" name="attrakDiff_NoCom" value="-3">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_NoCom" value="-2">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_NoCom" value="-1">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_NoCom" value="0">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_NoCom" value="1">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_NoCom" value="2">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_NoCom" value="3">
+                    </label>
+                </span>
+                <span>Commun</span>
+            </div>
+
+            <div>
+                <span>Incontrôlable</span>
+                <span data-attrakdiff="QP">
+                    <label>
+                        <input type="radio" name="attrakDiff_IcMa" value="-3">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_IcMa" value="-2">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_IcMa" value="-1">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_IcMa" value="0">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_IcMa" value="1">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_IcMa" value="2">
+                    </label>
+                    <label>
+                        <input type="radio" name="attrakDiff_IcMa" value="3">
+                    </label>
+                </span>
+                <span>Maîtrisable</span>
+            </div>
+        </section>
+
+        <section>
+            <button type="button" disabled>Envoyer les réponses</button>
+        </section>
+
+        <section class="charts">
+            <div id="charts-container-01"></div>
+        </section>
+    </form>
+</body>
+</html>
