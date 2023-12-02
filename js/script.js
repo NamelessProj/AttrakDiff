@@ -105,10 +105,12 @@ sendButton.addEventListener('click', (e) => {
     newChart.id = 'canvas-'+iteration;
     chartContainer01.appendChild(newChart);
 
+    const chartLabels = ['QP', 'QHS', 'QHI', 'ATT'];
+
     const ctx01 = document.getElementById('canvas-'+iteration);
 
     var data01 = {
-        labels: ['QP', 'QHS', 'QHI', 'ATT'],
+        labels: chartLabels,
         datasets: [{
             label: 'Résultat du test AttrakDiff',
             data: dataChart,
@@ -139,5 +141,26 @@ sendButton.addEventListener('click', (e) => {
         }
     });
 
+
+    // TBL
+
+    const tblValue = document.getElementById('tblValue');
+    tblValue.innerHTML = '';
+
+    chartLabels.forEach(data => {
+        let newSpan = document.createElement("span");
+        let textNode = document.createTextNode(data);
+        newSpan.appendChild(textNode);
+        tblValue.appendChild(newSpan);
+    });
+
+    dataChart.forEach(data => {
+        let newSpan = document.createElement("span");
+        let textNode = document.createTextNode(data);
+        newSpan.appendChild(textNode);
+        tblValue.appendChild(newSpan);
+    });
+
+    
     iteration++;
 });
