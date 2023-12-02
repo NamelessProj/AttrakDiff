@@ -193,3 +193,16 @@ section.charts > div > canvas:not(:last-child){
     visibility: hidden;
     display: none;
 }
+
+#tblValue{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: minmax(60px, auto);
+    place-items: center;
+}
+section.charts:not(:has(canvas)) + section:has(#tblValue){
+    display: none;
+}
+#tblValue > span:nth-child(-n+4){
+    font-weight: bolder;
+}
